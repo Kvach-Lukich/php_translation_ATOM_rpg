@@ -5,7 +5,7 @@ $cnf['projectprefix']='TTmod'; //имя мода
 $cnf['primlang']='ru'; //основной язык
 $cnf['langs']=['en','de']; //массив дополнительных языков, если у вас в начале только ru - то оставить массив пустым $cnf['langs']=[];
 //$cnf['langs']=['fr']; //можно комментировать/разкомментировать нужные варианты и создать предустановки.
-$cnf['translator']='en'; //устаревшее
+$cnf['fixjson']=false; //восстанавливать пропущенные запятые в json
 $cnf['alllngfile']='all.json'; //название основного файла
 
 $cnf['objpath']='Assets/Resources/Entities/';

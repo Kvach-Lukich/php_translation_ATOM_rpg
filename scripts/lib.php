@@ -1,6 +1,24 @@
 <?
 function jsonrider($file){
-   return json_decode(file_get_contents($file),true);
+   global $cnf;
+   if (!$cnf['fixjson']){
+      return json_decode(file_get_contents($file),true);
+   }else{
+      $json=file_get_contents($file);
+      $arr=explode("\n",$json);
+      unset($json);
+      foreach($arr as $str){
+         $str=trim($str);
+         if($str){
+            $newjson.=$str;
+         }
+      }
+      unset($arr);
+      $newjson=str_replace('}{', '}, {', $newjson);
+      $newjson=str_replace('""', '", "', $newjson);
+      $newjson=str_replace('}"', '}, "', $newjson);
+      return json_decode($newjson,true);
+   }
 }
 function jsonwriter($file,$arr){
    file_put_contents($file, json_encode( $arr , JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) );
