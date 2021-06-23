@@ -7,6 +7,7 @@ x64 Non Thread Safe https://windows.php.net/downloads/releases/php-8.0.7-nts-Win
 3. Проверить установлена ли Visual C++ Redistributable for Visual Studio 2015-2019 (слева на странице есть ссылки на инсталлер) https://aka.ms/vs/16/release/VC_redist.x64.exe
 
 Использование:
+
 0. настроить конфигурацию в файле scripts/config.php
 1. если мод уже локализирован - то обязательно внести все текущии локализации в массив в конфиге
 2. запустить mkall.cmd - появится all.json 1 файл со всеми текущими локализациями
