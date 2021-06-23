@@ -1,0 +1,5 @@
+*.log
+*.txt
+*.json
+php/*
+!php/php.ini

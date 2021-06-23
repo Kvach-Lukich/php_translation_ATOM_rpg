@@ -1,0 +1,1 @@
+php\php.exe scripts\mkdiff.php

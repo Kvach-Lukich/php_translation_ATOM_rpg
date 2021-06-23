@@ -1,0 +1,1 @@
+php\php.exe scripts\mkall.php
